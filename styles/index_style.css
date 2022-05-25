@@ -1,0 +1,13 @@
+body {
+    font-family: 'Inter';
+}
+
+#firstsection div {
+    text-align: center;
+    padding: 2%;
+}
+
+footer {
+    background-color: #669999;
+    text-align: center;
+}
