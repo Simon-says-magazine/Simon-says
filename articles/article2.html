@@ -5,9 +5,43 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="styles/style2.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src = "java_comics.js"></script>
+        <script>jQuery(document).ready(function(){
+            $('h1').mousemove(function(e){
+              var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
+              var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
+              $('h1').css('text-shadow', +rYP/10+'px '+rXP/40+'px rgba(227,6,19,.8), '+rYP/15+'px '+rXP/15+'px rgba(255,237,0,1), '+rXP/40+'px '+rYP/10+'px rgba(3,37,126,.8)');
+            });
+            $('h2').mousemove(function(e){
+              var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
+              var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
+              $('h2').css('text-shadow', +rYP/10+'px '+rXP/40+'px rgba(227,6,19,.8), '+rYP/15+'px '+rXP/15+'px rgba(255,237,0,1), '+rXP/40+'px '+rYP/10+'px rgba(3,37,126,.8)');
+            });
+         });
+        </script>
     </head>
-    <body>
+    <body id ="style2_body">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand active" href="#">Simon says</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         
         
         <section id="text_content">
@@ -40,6 +74,7 @@
                 suffers from many of the problems that plague typical developing
                 country.</strong></p> 
         </section>
+            
 
         <section id="introduction">
         <h2>I. INTRODUCTION</h2>
@@ -150,7 +185,9 @@
         consumption restricted themselves to achieve a lower consumption
         in order to receive low cost of electricity <a href="#reference39">[39]</a>.
         Another example of nudge theory at work is the website called
-        Stikk <sup><button onclick="open_footnote()"><a href="#footnote1">1</a></button></sup>, which helps to achieve personal goals (such as losing
+        Stikk, <sup><button onclick="open_footnote_1()">1</button></sup>
+        <span class="footnote" id="first_footnote" style="display:none;"><sup>1</sup><a href="https://www.stickk.com/">http://www.stickk.com/</a></span>
+        which helps to achieve personal goals (such as losing
         weight, quitting smoking, staying healthier, etc.). Once we set
         some goal, like to jog three times a day, we have to put some
         money at stake and if we fail to meet our own set target,
@@ -167,7 +204,6 @@
         “Don’t Go” or “Order this and not that”. There is an ongoing
         debate on whether the nudges are a useful way to improve
         health sector as many of the libertarians do not believe in it,
-        <p class="footnote" style="visibility: hidden"><sup><a name="footnote1">1</a></sup><a href="https://www.stickk.com/">http://www.stickk.com/</a></p>
         or it is hard to make them realize that nudging the behavior
         is a useful way to promote healthier life since they believe
         that many people do not know what is best for them. It also
@@ -304,8 +340,9 @@ this incentive <a href="#reference7">[7]</a>. Another approach to handle the sam
 of smoking cessation is by signing contracts in presence of
 other individuals which caused positive changes.
 Another major health issue is being overweight and obese
-(e.g., about six out of every ten adults are overweight <sup><a href="#footnote2">2</a></sup>) due
-to poor eating habits. Even though most people understand
+(e.g., about six out of every ten adults are overweight) <sup><button onclicK="open_footnote_2()">2</button></sup>
+<span class="footnote" id="second_footnote" style="display:none"><sup>2</sup><a href="http://www.gallup.com/poll/125741/six-overweight-obese.aspx">http://www.gallup.com/poll/125741/six-overweight-obese.aspx</a></span>
+due to poor eating habits. Even though most people understand
 that eating fruits and fresh vegetables is beneficial for their
 health, still a large group of people fail to purchase fruits and
 vegetables when shopping. The use of behavioral insights and
@@ -328,7 +365,6 @@ avoid spillage on toilet floor. This approach, as it seems
 to be very simple and also humorous, tends to reduce the
 spillage to about 80%. Another important strategy of nudge is
 providing less variety of food at cafeteria would make people
-<p class="footnote"><sup><a name="footnote2">2</a></sup><a href="http://www.gallup.com/poll/125741/six-overweight-obese.aspx">http://www.gallup.com/poll/125741/six-overweight-obese.aspx</a></p>
 eat less junk food and more healthier food which is limited
 in the menu of cafeteria <a href="#reference34">[34]</a>. Some other methodologies for
 using nudges for better and healthier life (such as providing
@@ -611,14 +647,12 @@ technology <a href="#reference4">[4]</a>[4] <a href="#reference6">[6]</a> <a hre
 <li type="A">
 <h3>Improved Road Traffic Through Improved Driving Behavior></h3> 
 According to World Health Rankings website, the rate of
-death caused in road accidents is about 20 per 100,000 people<sup><a href="#footnote3">3</a></sup>.
+death caused in road accidents is about 20 per 100,000 people. <sup><button onclick="open_footnote_3()">3</button></sup>
+<span class="footnote" id="third_footnote" style="display:none"><sup>3</sup><a href="https://www.worldlifeexpectancy.com/cause-of-death/road-traffic-accidents/by-country/">http://www.worldlifeexpectancy.com/cause-of-death/road-traffic-accidents/by-country/</a></span>
 The people who are injured in these situations is another count.
 The number of people that are directly or indirectly affected
 in the road accidents can be reduced by using the persuasive
 technology and behavioral science.<br/>
-<p class="footnote"><sup><a name="footnote3">3</a></sup><a href="http://www.worldlifeexpectancy.com/cause-of-death/
-    road-traffic-accidents">http://www.worldlifeexpectancy.com/cause-of-death/</a>
-road-traffic-accidents/by-country/</p>
 Smartphones, which have now become the central computer
 and communication devices in the lives of people around
 the world, have been shown in the literature to be very
@@ -637,7 +671,8 @@ drivers so that their driving is safe for environment as well
 as themselves. This system is known as Mobile Telematics
 System and major application which is developed by Cambridge
 Mobile Telemetics is <em>DriveWell</em> <a href="#reference28">[28]</a>. The application
-architecture as described website<sup><a href="#footnote4">4</a></sup> is also shown
+architecture as described website<sup><button onclick="open_footnote_4()">4</button></sup> 
+<span class="footnote" id="fourth_footnote" style="display:none"><sup>4</sup><a href="https://www.cmtelematics.com/drivewell/">https://www.cmtelematics.com/drivewell/</a></span>is also shown
 in <a href="#drivewell_architecture">figure 2</a>. It describes the three layers of architecture for
 collection of sensory data, processing upon this received data
 and finally towards behavioral changes.
@@ -645,8 +680,9 @@ and finally towards behavioral changes.
 <p>Fig. 2: Architecture of <em>DriveWell</em> Application. The use of
 behavioural analytics and nudge theory can be used to improve
 driver’s behaviour.</p></a>
-Another application known as <em>FLO</em><sup><a href="#footnote5">5</a></sup> is introduced which
-gives instant feedback to drivers on road to promote safe
+Another application known as <em>FLO</em> <sup><button onclick="open_footnote_5()">5</button></sup>
+<span class="footnote" id="fifth_footnote" style="display:none"><sup>5</sup><a href="https://www.driveflo.com/">https://www.driveflo.com/</a></span>
+is introduced which gives instant feedback to drivers on road to promote safe
 driving. The application aims to improve the driving pattern
 of drivers by using scoring mechanism, every trip of driver is
 recorded by application and then positive scores are assigned
@@ -658,8 +694,6 @@ handle this global problems faced by people during driving,
 we aim to provide solution by building an Android based
 application for Pakistan, which can monitor the driving pattern
 of drivers on road using the built-in sensors of smartphone.
-<p class="footnote"><sup><a name="footnote4">4</a></sup><a href="https://www.cmtelematics.com/drivewell/">https://www.cmtelematics.com/drivewell/</a></p>
-<p class="footnote"><sup><a name="footnote5">5</a></sup><a href="https://www.driveflo.com/">https://www.driveflo.com/</a></p>
 <a name="child_death"><img src="images/Method-and-data-sources-for-child-causes-of-death-2000-2015-A-large-number-of-deaths.png" alt="Method and data sources for child causes of death 2000-2015">
 <p>Fig. 3: Method and data sources for child causes of death 2000-2015. A large number of deaths caused are preventable through
 immunization, which motivates our nudge-based immunization education application.</p></a>
@@ -750,14 +784,14 @@ the generational capacity of current infrastructure,
 resulting in an average shortfall of 4,000 Megawatts. Due
 to this massive energy deficit, the everyday life of Pakistani
 citizens is significantly affected and it is common for urban
-citizens to face up to 6–12 hours of <em>load shedding</em><sup><a href="#footnote6">6</a></sup> and rural
-areas suffer even more (18–21 hours of load shedding). While
+citizens to face up to 6–12 hours of <em>load shedding</em> <sup><button onclick="open_footnote_6()">6</button></sup> 
+<span class="footnote" id="sixth_footnote" style="display:none"><sup>6</sup>Load shedding refers to the action of shedding excessive load above
+generating capacity by interrupting electricity supply to consumers</span>
+and rural areas suffer even more (18–21 hours of load shedding). While
 the Government of Pakistan has initiated many projects in
 recent times to improve the generational infrastructure, due
 to the concomitant increase in the population and therefore
 the user demand, it is anticipated that the practice of load
-<p class="footnote"><sup><a name="footnote6">6</a></sup>Load shedding refers to the action of shedding excessive load above
-generating capacity by interrupting electricity supply to consumers</p>
 shedding may not be completely eliminated unless consumer
 behavior is also transformed.<br/>
 The use of persuasive technology and behavioral insights
@@ -773,8 +807,9 @@ been successful in encouraging people to make their homes
 more green. This was done by giving people incentives and
 also providing special discounts on the purchase of energy
 efficient household items at government level.<br/>
-As another example, A US-based company Opower<sup><a href="#footnote7">7</a></sup> sends
-electricity and gas consumption reports to consumers by comparing
+As another example, A US-based company Opower<sup><button onclick="open_footnote_7()">7</button></sup> 
+<span class="footnote" id="seventh_footnote" style="display:none"><sup>7</sup> <a href="http://www.opower.com">http://www.opower.com</a></span>
+sends electricity and gas consumption reports to consumers by comparing
 their usage with other costumers of similar household
 usage. A snapshot of the power bill sent by Opower is shared
 in <a href="#energy_bill">Figure 4</a>. This figure encapsulates an embedded nudge
@@ -785,7 +820,6 @@ subscribers. Users are also provided energy conservation tips
 on their bills and this practice had a positive result and
 people started to restrict their consumption by 2$ <a href="#reference3">[3]</a>. The
 policy makers identified three major policies to help to achieve
-<p class="footnote"><sup><a name="footnote7">7</a></sup><a href="http://www.opower.com">http://www.opower.com</a></p>
 the goal of saving energy. First is the financial help from
 government, Second is providing users with incentives against
 their consumption of gas and electricity and third is that
@@ -1052,5 +1086,11 @@ for initiating & maintaining health behavior change.<em> Behavioral Science
 </section>
         
     </section>
+    <footer>
+        <p>A project for the course "Information Modelling and Web Technologies" <br>
+        <p>MA "Digital Humanities and Digital Knowledge, University of Bologna</p>
+        <p>Powered by Bootstrap</p>
+        <p>&#169; 2022 Copyright: Simon says</p>
+    </footer>
     </body>
 </html>
