@@ -1,5 +1,4 @@
-
-body {
+#style2_body {
     font-family: VTC Letterer Pro;
     font-size: 15pt;  /* For full-size comic books (6.625” x 10.187” trim), most creators use a 9.5 or 10-point size.*/
     text-align: justify;
@@ -7,21 +6,32 @@ body {
     background-size: 100% ;
 }
 
-h1 {
+#style2_body h1,#style2_body h2 {
 	font-family:BadaBoom BB;
-	font-size: 55pt;
+	letter-spacing: 8px;
+	text-align: center;
+	font-weight: 400;
 }
+
+#style2_body h1 {
+	font-size: 50pt;
+}
+#style2_body h2 {
+	font-size: 35pt;
+}
+
 
 #text_content { 
     padding: 5%;
-    width:75%;
+	margin-left: 2%;
+	width:70%;
     background-color: white;
 }
 
 /*comic cloud */
 .footnote {
 	position: relative;
-	width: 300px;
+	width: 10%;
 	text-align: center;
 	line-height: 1.4em;
 	margin: 40px auto;
@@ -31,14 +41,14 @@ h1 {
 	padding: 20px;
 	font-size: large;
 }
-p.footnote {
+span.footnote {
 	width: 300px;
 	border-radius: 200px;
-	padding: 30px;	
+	padding: 30px;
 }
 
-p.footnote:before,
-p.footnote:after {
+span.footnote:before,
+span.footnote:after {
 	content: ' ';
 	position: absolute;
 	width: 0;
@@ -54,7 +64,7 @@ p.footnote:after {
 	border-radius: 28px;
 }
 
-p.footnote:after {
+span.footnote:after {
 	width: 20px;
 	height: 20px;
 	left: 5px;
@@ -62,4 +72,29 @@ p.footnote:after {
 	-webkit-border-radius: 18px;
 	-moz-border-radius: 18px;
 	border-radius: 18px;
+}
+
+/*buttons*/
+sup button {
+	font-family: VTC Letterer Pro;
+	font-size:25px;
+	width:50px;
+	height: 20px;
+	background-color: yellow;
+	box-shadow: 5px 5px #333;
+	cursor: pointer;
+
+}
+
+/*images*/
+img {
+	max-width: 100%;
+    height: auto;
+}
+
+/*footer*/
+
+footer {
+    background-color: #669999;
+    text-align: center;
 }
